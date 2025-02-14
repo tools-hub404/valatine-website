@@ -34,34 +34,87 @@ body {
     animation: spin 2s linear infinite;
 }
 
-.infinity-loader::before {
-    left: 0;
-    border-right-color: #ff4081; /* Valentine-themed pink color */
-    animation-delay: -1s;
+.infinity-loader::before {/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffcccb;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
 }
 
-.infinity-loader::after {
-    right: 0;
-    border-left-color: #ff4081; /* Valentine-themed pink color */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+h1 {
+    font-size: 5rem;
+    color: #e74c3c;
+    animation: bounce 1s infinite alternate;
 }
 
 p {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #ff4081; /* Valentine-themed pink color */
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-#timer {
-    margin-top: 10px;
-    font-size: 1em;
-    color: #fff;
+.share-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.share-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+.share-button i {
+    font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
 }
