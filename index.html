@@ -1,58 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Valentine's Day!</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Loading</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">Happy Valentine's Day, My Love! ??</h1>
-    <p class="message">You mean the world to me. Here's to us and our beautiful journey together. I love you endlessly!</p>
-    <div class="heart"></div>
-    <button class="btn" onclick="showSurprise()">Click for a Surprise!</button>
-    <p class="surprise" id="surprise"></p>
-
-    <!-- Photo Gallery -->
-    <div class="gallery">
-      <h2>Our Memories Together</h2>
-      <div class="photos">
-        <img src="photo1.jpg" alt="Memory 1">
-        <img src="photo2.jpg" alt="Memory 2">
-        <img src="photo3.jpg" alt="Memory 3">
-      </div>
+    <div class="loading-container">
+        <div class="infinity-loader"></div>
+        <p id="loading-text">Loading...</p>
+        <p id="timer">Time left: <span id="time">10</span> seconds</p>
     </div>
 
-    <!-- Personalized Message -->
-    <div class="personal-message">
-      <h2>To My Dearest Valentine,</h2>
-      <p>
-        Every moment with you is a treasure. You light up my world with your smile, and I am so grateful to have you in my life. 
-        Here's to many more beautiful memories together. I love you more than words can express!
-      </p>
-    </div>
-
-    <!-- Social Media Share Buttons -->
-    <div class="social-share">
-      <h2>Share the Love!</h2>
-      <div class="share-buttons">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_WEBSITE_URL" target="_blank" class="facebook">
-          <i class="fab fa-facebook"></i> Facebook
-        </a>
-        <a href="https://twitter.com/intent/tweet?url=YOUR_WEBSITE_URL&text=Check%20out%20this%20beautiful%20Valentine's%20Day%20message!" target="_blank" class="twitter">
-          <i class="fab fa-twitter"></i> Twitter
-        </a>
-        <a href="https://wa.me/?text=Check%20out%20this%20beautiful%20Valentine's%20Day%20message!%20YOUR_WEBSITE_URL" target="_blank" class="whatsapp">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" class="instagram">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-      </div>
-    </div>
+    <script src="script.js"></script>
+</body>
+</html>
   </div>
   <script src="script.js"></script>
 </body>
