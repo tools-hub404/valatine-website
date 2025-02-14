@@ -1,3 +1,14 @@
+// Show loading screen initially
+const loadingScreen = document.getElementById('loading-screen');
+const container = document.querySelector('.container');
+
+// After 5 seconds, hide loading screen and show main content
+setTimeout(() => {
+    loadingScreen.style.display = 'none';
+    container.classList.remove('hidden');
+}, 5000);
+
+// Countdown Logic
 let countdown = 5;
 const countdownElement = document.getElementById('countdown');
 
