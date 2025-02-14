@@ -1,20 +1,26 @@
-// Get elements
-const loadingText = document.getElementById("loading-text");
-const timerElement = document.getElementById("time");
+let countdown = 5;
+const countdownElement = document.getElementById('countdown');
 
-let timeLeft = 10; // 10-second timer
+const countdownInterval = setInterval(() => {
+    countdown--;
+    countdownElement.textContent = countdown;
 
-// Function to update the timer
-function updateTimer() {
-    timerElement.textContent = timeLeft;
-    timeLeft--;
-
-    if (timeLeft < 0) {
-        clearInterval(timerInterval); // Stop the timer
-        loadingText.textContent = "Your Valentine Gift is Here! 🎁💖";
-        timerElement.textContent = "0"; // Ensure it shows 0 at the end
+    if (countdown <= 0) {
+        clearInterval(countdownInterval);
+        countdownElement.textContent = "Hacked!";
+        alert("You are just hacked! Happy Valentine's Day!");
     }
-}
+}, 1000);
 
-// Start the timer
-const timerInterval = setInterval(updateTimer, 1000); // Update every second
+// Share on WhatsApp
+document.getElementById('share-whatsapp').addEventListener('click', () => {
+    const shareUrl = `https://api.whatsapp.com/send?text=Check%20out%20this%20awesome%20Valentine's%20Day%20surprise!%20${window.location.href}`;
+    window.open(shareUrl, '_blank');
+});
+
+// Share on Instagram
+document.getElementById('share-instagram').addEventListener('click', () => {
+    const shareUrl = `https://www.instagram.com/`;
+    alert("To share on Instagram, copy the link and post it in your story or feed!");
+    window.open(shareUrl, '_blank');
+});
